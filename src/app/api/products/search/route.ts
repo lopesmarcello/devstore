@@ -4,7 +4,7 @@ import data from "../data.json";
 
 export async function GET(request: NextRequest) {
   //Simula demora de response do backend
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   const { searchParams } = request.nextUrl;
   const query = z.string().parse(searchParams.get("q"));
